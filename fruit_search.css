@@ -7,16 +7,25 @@
   }
   
   body {
-    /* TODO */
+    display: flex;
+    height: 100vh;
+    background: rgb(255,200,0);
+    background: linear-gradient(90deg, rgba(255,200,0,1) 0%, rgba(255,125,0,1) 50%, rgba(255,75,0,1) 100%);
   }
   
   input {
    /* TODO */
+    background-color: rgba(255,225,0,.5);
+    height: 40px;
+    width: 300px;
+    border: none;
+    text-indent: 5px;
   }
   
   .search-container {
-   /* TODO */
+    margin: auto;
   }
+
   .search-container input,
   .search-container .suggestions {
     /* TODO */

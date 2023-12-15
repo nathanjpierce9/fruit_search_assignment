@@ -11,26 +11,31 @@ function search(str) {
             if (fruits.includes(capitalizedStr) === true || fruits.includes(str) === true || fruits.includes(lowercaseStr) === true){
             results.push(fruits);
         }
-    }     
-	return results;
+    }    
+    showSuggestions(results,str);
 }
 
 function searchHandler(e) {
-    let value = e.target.value.tostring();
-    return search(value);
+    let value = e.target.value;
+    search(value);
 }
 
 function showSuggestions(results, inputVal) {
-    for (let result of results) {
-        const suggestion = document.createElement('li')
-        suggestion.appendChild(document.createTextNode(result));
-        suggestions.appendChild(suggestion);
+    if (inputVal) {
+        document.querySelectorAll('li').forEach(e => e.remove());
+        for (let result of results) {
+            const suggestion = document.createElement('li');
+            suggestion.appendChild(document.createTextNode(result));
+            suggestions.appendChild(suggestion);
+        }
+    }
+    else {
+        document.querySelectorAll('li').forEach(e => e.remove());
     }
     return suggestions;
 }
 
 function useSuggestion(e) {
-	// TODO
     input.value = e.target.innerHTML;
     suggestions.innerHTML = ''; 
 }
