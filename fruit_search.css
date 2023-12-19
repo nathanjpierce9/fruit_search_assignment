@@ -1,5 +1,5 @@
 * {
-    /* box-sizing: border-box; */
+    box-sizing: border-box;
   }
   
   :focus {
@@ -8,46 +8,65 @@
   
   body {
     display: flex;
-    height: 100vh;
-    background: rgb(255,200,0);
+    height: 100vh;   
     background: linear-gradient(90deg, rgba(255,200,0,1) 0%, rgba(255,125,0,1) 50%, rgba(255,75,0,1) 100%);
   }
   
   input {
-   /* TODO */
     background-color: rgba(255,225,0,.5);
     height: 40px;
     width: 300px;
-    border: none;
     text-indent: 5px;
+    border-color: rgba(255,75,0,1);
   }
   
-  .search-container {
+   .search-container {
     margin: auto;
   }
 
   .search-container input,
   .search-container .suggestions {
     /* TODO */
+    
   }
   .search-container input {
    /* TODO */
+  
   }
   .search-container .suggestions {
-     /* TODO */
+    background-color: rgba(255,225,0,.5);
+    overflow-y: scroll;
+    cursor: pointer;
+    scrollbar-color: red green;
   }
+
+ .suggestions::-webkit-scrollbar-thumb {
+  background-color: red;
+ }
+ .suggestions::-webkit-scrollbar {
+  width: 15px;
   
+ }
   ul {
-    /* TODO */
+    padding: 0px;
+    margin: 0px;
+    max-height: 200px;
   }
+
   ul.has-suggestions {
+    
     /* TODO */
   }
+
   ul li {
-    /* TODO */
+    bottom: 0px;
+    display: flex;
+    height: 40px;
+    text-indent: 5px;
   }
+
   ul li:hover {
-    /* TODO */
+    background-color: rgba(255,75,0,1);
   }
   
   input {
