@@ -2,60 +2,46 @@
     box-sizing: border-box;
   }
   
-  :focus {
-   /* TODO */
-  }
-  
   body {
     display: flex;
+    align-items: center;
+    justify-content: center;
     height: 100vh;   
     background: linear-gradient(90deg, rgba(255,200,0,1) 0%, rgba(255,125,0,1) 50%, rgba(255,75,0,1) 100%);
   }
   
   input {
     background-color: rgba(255,225,0,.5);
-    height: 40px;
-    width: 300px;
+    height: 100%;
+    width: 100%;
     text-indent: 5px;
     border-color: rgba(255,75,0,1);
   }
   
    .search-container {
-    margin: auto;
+    width: 300px;
+    height: 40px;
   }
 
-  .search-container input,
   .search-container .suggestions {
-    /* TODO */
-    
-  }
-  .search-container input {
-   /* TODO */
-  
-  }
-  .search-container .suggestions {
+    position: relative;
     background-color: rgba(255,225,0,.5);
     overflow-y: scroll;
-    cursor: pointer;
-    scrollbar-color: red green;
+    cursor: pointer; 
   }
 
  .suggestions::-webkit-scrollbar-thumb {
-  background-color: red;
+  background-color: rgba(255,75,0,1);
  }
+
  .suggestions::-webkit-scrollbar {
-  width: 15px;
-  
+  width: 15px; 
  }
+ 
   ul {
     padding: 0px;
     margin: 0px;
     max-height: 200px;
-  }
-
-  ul.has-suggestions {
-    
-    /* TODO */
   }
 
   ul li {
@@ -69,6 +55,3 @@
     background-color: rgba(255,75,0,1);
   }
   
-  input {
-     /* TODO */
-  }
